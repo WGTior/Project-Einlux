@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url(https://wallpaperaccess.com/full/667329.png), url(https://www.doylestownhistorical.org/wp-content/uploads/2016/05/parchment-paper-cropped.jpg), url(https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/e4Gpia8/side-shot-of-a-chess-board-over-a-black-background-and-the-chess-pieces-lin_v0iu7ixol_thumbnail-1080_01.png), url(https://wallpapers.com/images/hd/parchment-background-f522oq0zfht1b3ti.jpg);
+            background-size: 100% 44%, 100% 80%, 100% 50%, 100% 60%;
+            background-position: 0vw -82.5vh, 0vw -81vh, 0vw 100vh, 0vw 220vh;
+            background-repeat: no-repeat, no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 4px outset #A0522D;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #FAD6A5;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 50px 0px 50px 0px;
+        }
+
+        .box h1 {
+            color: #000080;
+            font-size: 48px;
+            text-align: center;
+            margin: 0;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .box h2 {
+            color: #0D47A1;
+            font-size: 36px;
+            text-align: center;
+            margin: 0;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .scroll-container {
+            width: 45%;
+            height: 280px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 26.5%;
+            border: 2px solid transparent #341C02;
+        }
+
+        .scrolling-text {
+            position: absolute;
+            left: 50%;
+            height: auto;
+            transform: translate(-50%, 100%);
+            white-space: nowrap;
+            font-family: "MedievalSharp", serif;
+            font-size: 32px;
+            color: #341C02;
+            text-align: center;
+            transition: transform 0.3s linear;
+        }
+
+        .scroll-container:hover .scrolling-text {
+            animation: scroll-up 23s linear infinite;
+        }
+
+        @keyframes scroll-up {
+            from {
+                transform: translate(-50%, 50%);
+            }
+            to {
+                transform: translate(-50%, -100%);
+            }
+        }
+
+        .vertical-text {
+            position: absolute;
+            transform: translate(200%, 0%);
+            font-family: 'Old English Text MT', fantasy;
+            font-size: 125px;
+            text-shadow: -1px -1px 0 #1B0000, 1px -2.5px 0 #1B0000, -1px 1px 0 #1B0000, 1px 1px 0 #1B0000;
+            color: #A0522D;
+            text-align: center;
+            height: 300px;
+            width: 50px;
+            margin: 20px;
+        }
+
+        .vertical-text-2 {
+            position: absolute;
+            transform: translate(2500%, 0%);
+            font-family: 'Old English Text MT', fantasy;
+            font-size: 125px;
+            text-shadow: -2.5px -1px 0 #A0522D, 1px -1px 0 #A0522D, -1px 1px 0 #A0522D, 1px 1px 0 #A0522D;
+            color: #1B0000;
+            text-align: center;
+            height: 300px;
+            width: 50px;
+            margin: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 950px;
+            margin: 70px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            mix-blend-mode: multiply;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .values {
+            font-family: 'Brush Script MT', cursive, sans-serif;
+            font-size: 100px;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: -30px;
+            top: 90px;
+        }
+
+        .styled-iframe {
+            width: 600px;
+            height: 600px;
+            border: 6px solid #1B0000;
+            border-radius: 70px;
+            background-color: white;
+            display: block;
+            margin: -50px auto;
+            position: absolute;
+            top: 980px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Sliding Image Gallery Styles */
+
+        .slider-container {
+            width: 45%;
+            margin: 20px auto;
+            border: 4px solid transparent #A0522D;
+            overflow: hidden;
+            /* Hide overflow */
+            position: relative;
+            top: 800px;
+        }
+
+        .slider {
+            display: flex;
+            animation: slide 10s infinite;
+        }
+
+        .slider img {
+            width: 100vw;
+            height: auto;
+        }
+
+        @keyframes slide {
+            0%,
+            20% {
+                transform: translateX(0);
+            }
+            25%,
+            45% {
+                transform: translateX(-100%);
+            }
+            50%,
+            70% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .english {
+            font-family: 'Algerian', cursive, sans-serif;
+            font-size: 100px;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 10%;
+            top: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1> HTML PORTFOLIO </h1>
+        <h2> By Aquino, Tonie Jearynz </h2>
+    </div>
+
+    <div class="vertical-text">
+        F<br> I
+        <br> L
+        <br> I
+    </div>
+
+    <div class="vertical-text-2">
+        P<br> I
+        <br> N
+        <br> O
+    </div>
+
+    <div class="image-container">
+        <img src="https://cdna.artstation.com/p/assets/images/images/004/806/218/large/anoushka-russell-full-scroll.jpg?1486412928" alt="Parchment background">
+    </div>
+
+    <div class="scroll-container">
+        <div class="scrolling-text">
+            <br> Maaaring hindi maipahiwatig<br> Ngunit ang iyong ganda ay aking ibig<br> Lumayo man sa iyong mga lupain<br> Kanta ng Pilipinas ang aawitin<br> Karagatan mong tila puno ng ginto<br> Aming ipagtatanggol ng walang hinto<br> Kagubatang sinisikatan
+            ng araw<br> Magtatanim ng hindi ito pumanaw<br> Dakilang bansa, pakinggan ang pangako<br> Na'di iiwasan ang lukso ng dugo<br> Mananatili ito sa aking puso<br> Dahil ako ay tunay na pilipino
+        </div>
+    </div>
+
+    <div class="values"> V A L U E S</div>
+
+    <iframe class="styled-iframe" src="https://drive.google.com/file/d/1ia75cBJ_yzgNLBxfvzqev7hXjobmH10d/preview" allow="autoplay"></iframe>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://i.imgur.com/UVBIIOQ.png" alt="Image 1">
+            <img src="https://i.imgur.com/mJRmHsB.png" alt="Image 2">
+            <img src="https://i.imgur.com/rUqK6YT.png" alt="Image 3">
+        </div>
+    </div>
+    <div class="english"> E N G L I S H </div>
+</body>
+
+
+
+</html>
